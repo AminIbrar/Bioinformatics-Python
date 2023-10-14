@@ -1,5 +1,5 @@
 import collections
-Nucleotides = ['A','T','C','G']
+from sequences import *
 
 def validateSeq(dna_seq):
     tmpseq = dna_seq.upper()
@@ -14,3 +14,11 @@ def countNuc(seq):
         countDict[nuc] += 1
     return countDict
     #return dict(collections.Counter(seq))
+
+def transcription(seq):
+    """DNA -> RNA Transcription. Replacing Thymine with Uracil"""
+    return seq.replace('T','U')
+
+def reverse_compliment(seq):
+    """Swapping Adenine with Thymine and Guanine with Cytosine. Then Reversing the new String"""
+    return ''.join([DNA_Reverse_Compliment[nuc] for nuc in seq])[::-1]

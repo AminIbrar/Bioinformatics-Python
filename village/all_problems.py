@@ -46,3 +46,39 @@ for word in word_lst:
     word_dict[word] += 1
 for key,val in word_dict.items():
     print(f"{key} {val} \n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
