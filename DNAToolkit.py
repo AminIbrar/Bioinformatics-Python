@@ -22,3 +22,16 @@ def transcription(seq):
 def reverse_compliment(seq):
     """Swapping Adenine with Thymine and Guanine with Cytosine. Then Reversing the new String"""
     return ''.join([DNA_Reverse_Compliment[nuc] for nuc in seq])[::-1]
+
+
+def gc_content(seq):
+    """GC content in a DNA/RNA sequence"""
+    return round((seq.count('C') + seq.count('G')) / len(seq)*100)
+
+
+def gc_content_subset(seq, k=20):
+    res = []
+    for i in range(0,len(seq)-k+1,k):
+        subseq = seq[i:i+k]
+        res.append(gc_content(subseq))
+    return res
