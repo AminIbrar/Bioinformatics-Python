@@ -30,6 +30,7 @@ def gc_content(seq):
 
 
 def gc_content_subset(seq, k=20):
+    """ GC Content of DNA/RNA Sections"""
     res = []
     for i in range(0,len(seq)-k+1,k):
         subseq = seq[i:i+k]
